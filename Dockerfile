@@ -33,15 +33,16 @@ RUN sed -i.bak s/archive.ubuntu.com/mirror.tuna.tsinghua.edu.cn/g /etc/apt/sourc
   tmux \
   net-tools \
   git \
+  vim \
   bc \
-  textinfo diffstat python2.7 python2 python \
+  texinfo diffstat python2.7 python \
   dos2unix  doxygen  libc6:i386 libncurses5:i386 libstdc++6:i386 libz1:i386
   
 RUN locale-gen en_US.UTF-8 && update-locale
 
-ENV http_proxy=http://192.168.3.7:1080
-ENV https_proxy=http://192.168.3.7:1080
-ENV ftp_proxy=http://192.168.3.7:1080
+#ENV http_proxy=http://192.168.3.7:1080
+#ENV https_proxy=http://192.168.3.7:1080
+#ENV ftp_proxy=http://192.168.3.7:1080
 
 #RUN git config --global http.proxy 'socks5://192.168.3.7:1080' \
 #  git config --global https.proxy 'socks5://192.168.3.7:1080'
